@@ -1,0 +1,50 @@
+---
+title: Economic and Demographic Trends in Lakes Region
+author: Daniel Lee
+date: '2018-05-24'
+slug: economic-and-demographic-trends-in-lakes-region
+categories:
+  - R
+tags:
+  - plot
+  - R Markdown
+---
+
+```{r setup, include=FALSE}
+# Set the global option
+knitr::opts_chunk$set(message = F, warning = F, collapse = T, echo = T, results = 'markup')
+```
+
+## Import and get a sense of data
+
+```{r}
+# Import data
+data <- read.csv("data/census2.csv")
+
+str(data)
+
+summary(data)
+levels(data$Town)
+```
+
+## Exploratory data analysis
+What are some graphical tools for numerical data? When is one more appropriate than another?
+```{r}
+# Load packages
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+data %>%
+  filter(!Town %in% c("United States", "New Hampshire")) %>%
+  select(Town, popTotal, Year) %>%
+  mutate(Year = paste0("Yr",Year)) %>%
+  spread(Year, popTotal) %>%
+  ggplot(aes(reorder(x = Town, Yr2016-Yr2011), y = Yr2016-Yr2011, fill = Yr2016-Yr2011 > 0)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Population Change between 2007-2011 and 2012-2016",
+       x = "Number of People",
+       y = NULL)
+```
+
+
