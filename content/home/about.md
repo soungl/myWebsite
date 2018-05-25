@@ -35,5 +35,5 @@ weight = 5
 
 # Biography
 
-Daniel Lee is a professor of Economics and Data Analytics at Plymouth State University. His research interests include community economic development, macroeconomics, applied data analytics and tourism. He leads the development of the data analytics curriculum at Plymouth State University, which currently includes sports data analytics, financial analytics, and legal risk analytics.
+Daniel Lee holds a Ph.D. in economics and possesses years of consulting experience in performing detailed economic analyses for government, academic, and business organizations. He is known as the creator and the author of the North Country Economic Index. He served as the state's tourism research economist for the Division of Travel and Tourism Development. Daniel was also appointed by Governor Maggie Hassan to the New Hampshire Economic Development Advisory Council. He currently leads the development of the data analytics curriculum at Plymouth State University, which currently includes sports data analytics, financial analytics, and legal risk analytics.
 
