@@ -35,5 +35,5 @@ weight = 5
 
 # Biography
 
-Daniel Lee is a professor of Economics and Data Analytics at Plymouth State University. His research interests include community economic development, macroeconomics, applied data analytics and tourism. He leads the data analytics curriculum at Plymouth State University, which currently includes sports data analytics, financial analytics, and legal risk analytics.
+Daniel Lee is a professor of Economics and Data Analytics at Plymouth State University. His research interests include community economic development, macroeconomics, applied data analytics and tourism. He leads the development of the data analytics curriculum at Plymouth State University, which currently includes sports data analytics, financial analytics, and legal risk analytics.
 
