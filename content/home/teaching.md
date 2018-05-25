@@ -15,6 +15,22 @@ weight = 60
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
+Daniel has taught:
 
-To remove this section, either delete `content/home/teaching.md` or edit the frontmatter of the file to deactivate the widget by setting `active = false`.
+***Undergraduate***:
+
+* IS-1111: First Year Seminar: Data Analytics
+* EC-2000: Survey of Modern Economics
+* BU-2240: Business Statistics
+* EC-2550: Principles of Macroeconomics
+* EC-2560: Principles of Microeconomics
+* BU-3100: Financial Modeling
+* EC 3510: Intermediate Macroeconomics
+* BU-4090: ST: Sports Data Analytics
+* BU-4090: ST: Legal Risk Analytics
+* EC-4440: International Economics
+* EC-4460: Money and Banking
+
+***Graduate***:
+
+* BU-5210: Economic Analysis
