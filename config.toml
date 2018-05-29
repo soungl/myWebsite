@@ -268,7 +268,7 @@ enableGitInfo = false
   weight = 3
 
 [[menu.main]]
-  name = "Consulting Projects"
+  name = "Research Contracts"
   url = "#projects"
   weight = 4
 
