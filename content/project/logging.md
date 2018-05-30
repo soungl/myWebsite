@@ -6,7 +6,7 @@ date = 2014-09-25T00:00:00
 title = "Economic Impact of the Logging Industry"
 
 # Project summary to display on homepage.
-summary = "The ski inudstry makes a huge contribution to the region's economy."
+summary = "The New Hampshire Timber Owners Association (NHTOA) has asked Daniel Lee of the Center for Rural Partnerships and the College of Business Administration to study and document the economic activity of a sample of New Hampshire timber harvesting companies."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "logging.jpg"
@@ -28,4 +28,4 @@ caption = "My caption :smile:"
 
 +++
 
-This project is in progress and expected to be completed by July, 2018.
+To view the report, click this [link](http://www.nhtoa.org/files/docs/PSU%20%20NHTOA%20logging%20economics%20in%20NH.pdf) here.
