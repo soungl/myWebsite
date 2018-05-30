@@ -1,12 +1,11 @@
 ---
-title: Economic and Demographic Trends in Lakes Region
+title: Growth of Entrepreneurial Acitivity in Lakes Region
 author: Daniel Lee
-date: '2018-05-24'
-slug: economic-and-demographic-trends-in-lakes-region
+date: '2018-05-25'
+slug: growth-of-entrepreneurial-acitivity-in-lakes-region
 categories:
   - R
 tags:
-  - plot
   - R Markdown
 ---
 
@@ -18,244 +17,58 @@ tags:
 data &lt;- read.csv(&quot;data/census2.csv&quot;)
 
 str(data)
-## &#39;data.frame&#39;:    64 obs. of  56 variables:
-##  $ X                             : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ Town                          : Factor w/ 32 levels &quot;Alexandria&quot;,&quot;Alton&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
-##  $ County                        : Factor w/ 6 levels &quot; Belknap&quot;,&quot; Carroll&quot;,..: 3 1 4 3 1 1 3 3 1 4 ...
-##  $ popTotal                      : int  1836 5214 2422 1507 4564 7350 1179 3063 960 1120 ...
-##  $ medianAge                     : num  39.2 44.6 47.3 39.6 38.4 41.1 47.7 47.1 49.2 40.5 ...
-##  $ popNative_bornUSA             : int  1783 5023 2339 1445 4472 7141 1143 2961 920 1106 ...
-##  $ popNative                     : int  1790 5040 2357 1445 4492 7170 1153 2992 924 1120 ...
-##  $ popNaitve_bornNH              : int  1047 2160 1359 782 2247 4334 545 1538 453 548 ...
-##  $ popMoved_otherState           : int  27 26 63 20 42 26 44 45 5 16 ...
-##  $ popMoved_abroad               : int  0 34 39 29 0 0 0 8 0 0 ...
-##  $ popCommute_car                : int  749 2312 1146 611 2304 3359 575 1337 453 556 ...
-##  $ popCommute_publicT            : int  0 0 0 0 0 0 5 0 0 0 ...
-##  $ popCommute_bicycle            : int  0 0 0 0 0 0 0 10 0 0 ...
-##  $ popCommute_foot               : int  10 80 86 22 24 88 10 58 29 7 ...
-##  $ popCommute_other              : int  10 0 95 0 25 24 21 0 0 5 ...
-##  $ popCommute_home               : int  31 352 79 6 89 123 52 47 6 22 ...
-##  $ popBA                         : int  217 1119 473 218 890 994 272 518 319 123 ...
-##  $ popPov                        : int  147 288 180 187 134 502 79 437 95 208 ...
-##  $ medianIncome                  : int  56667 60045 67900 38821 65221 58561 55208 43242 58571 46845 ...
-##  $ incomeLabor                   : num  3.07e+07 1.27e+08 5.73e+07 2.32e+07 1.00e+08 ...
-##  $ incomeLabor_WageSalary        : num  2.76e+07 1.12e+08 5.04e+07 1.99e+07 9.03e+07 ...
-##  $ incomeLabor_SelfEmpl          : num  3107600 14389400 6898600 3321700 9786700 ...
-##  $ incomeInvest                  : num  1733400 5898900 1834700 611700 3353800 ...
-##  $ incomeTotal                   : num  4.06e+07 1.56e+08 7.15e+07 3.20e+07 1.20e+08 ...
-##  $ LF                            : int  919 3007 1502 691 2692 3782 723 1512 501 663 ...
-##  $ LF_Civilian                   : int  919 3007 1494 691 2692 3782 723 1512 501 663 ...
-##  $ LF_Civilian_Unemployed        : int  85 163 49 52 108 165 36 36 13 40 ...
-##  $ LF_Not                        : int  464 1237 531 544 931 2027 324 997 318 210 ...
-##  $ housingTotal                  : int  945 4219 1124 1261 2344 3640 968 2481 730 658 ...
-##  $ housingVacant_rent            : int  0 31 18 65 31 30 12 87 0 0 ...
-##  $ housingVacant_seasonal        : int  240 2016 122 395 557 317 427 1039 306 150 ...
-##  $ medianHomeValue               : int  206500 263000 228500 167900 205500 184900 257400 186700 329200 203500 ...
-##  $ medianGrossRent               : int  918 822 937 552 1133 922 760 704 786 945 ...
-##  $ unemplRate                    : num  9.25 5.42 3.28 7.53 4.01 ...
-##  $ LFparticipationRate           : num  66.4 70.9 73.9 56 74.3 ...
-##  $ housingVacant_seasonal_percent: num  25.4 47.8 10.9 31.3 23.8 ...
-##  $ housingVacant_rent_percent    : num  0 0.735 1.601 5.155 1.323 ...
-##  $ incomeNonLabor                : num  9897700 28775100 14222800 8804000 19797800 ...
-##  $ incomeTransferPayment         : num  8164300 22876200 12388100 8192300 16444000 ...
-##  $ incomeNonLabor_percent        : num  24.4 18.5 19.9 27.5 16.5 ...
-##  $ incomeInvest_percent          : num  4.26 3.79 2.57 1.91 2.8 ...
-##  $ incomeTransferPayment_percent : num  20.1 14.7 17.3 25.6 13.7 ...
-##  $ incomeLabor_percent           : num  75.6 81.5 80.1 72.5 83.5 ...
-##  $ popPov_percent                : num  8.01 5.52 7.43 12.41 2.94 ...
-##  $ popBA_percent                 : num  11.8 21.5 19.5 14.5 19.5 ...
-##  $ popMoved_otherState_percent   : num  1.471 0.499 2.601 1.327 0.92 ...
-##  $ popMoved_abroad_percent       : num  0 0.652 1.61 1.924 0 ...
-##  $ popMoved_percent              : num  1.47 1.15 4.21 3.25 0.92 ...
-##  $ popCommute_car_percent        : num  40.8 44.3 47.3 40.5 50.5 ...
-##  $ popCommute_publicT_percent    : num  0 0 0 0 0 ...
-##  $ popCommute_bicycle_percent    : num  0 0 0 0 0 ...
-##  $ popCommute_foot_percent       : num  0.545 1.534 3.551 1.46 0.526 ...
-##  $ popCommute_other_percent      : num  0.545 0 3.922 0 0.548 ...
-##  $ popCommute_home_percent       : num  1.688 6.751 3.262 0.398 1.95 ...
-##  $ Year                          : int  2011 2011 2011 2011 2011 2011 2011 2011 2011 2011 ...
-##  $ benchM                        : int  NA NA NA NA NA NA NA NA NA NA ...
 
-summary(data)
-##        X                 Town              County      popTotal        
-##  Min.   : 1.00   Alexandria: 2    Belknap     :22   Min.   :      541  
-##  1st Qu.:16.75   Alton     : 2    Carroll     :16   1st Qu.:     1496  
-##  Median :32.50   Andover   : 2    Grafton     :12   Median :     3013  
-##  Mean   :32.50   Ashland   : 2    Merrimack   :10   Mean   :  9812983  
-##  3rd Qu.:48.25   Barnstead : 2   New Hampshire: 2   3rd Qu.:     5516  
-##  Max.   :64.00   Belmont   : 2   United States: 2   Max.   :318558162  
-##                  (Other)   :52                                         
-##    medianAge     popNative_bornUSA     popNative        
-##  Min.   :37.00   Min.   :      481   Min.   :      487  
-##  1st Qu.:42.27   1st Qu.:     1433   1st Qu.:     1433  
-##  Median :46.30   Median :     2942   Median :     2966  
-##  Mean   :46.82   Mean   :  8398579   Mean   :  8537742  
-##  3rd Qu.:50.25   3rd Qu.:     5246   3rd Qu.:     5272  
-##  Max.   :59.50   Max.   :271639606   Max.   :276363808  
-##                                                         
-##  popNaitve_bornNH    popMoved_otherState popMoved_abroad    
-##  Min.   :      145   Min.   :      5     Min.   :      0.0  
-##  1st Qu.:      664   1st Qu.:     27     1st Qu.:      0.0  
-##  Median :     1388   Median :     47     Median :      0.0  
-##  Mean   :  5746994   Mean   : 188730     Mean   :  50896.0  
-##  3rd Qu.:     2608   3rd Qu.:    103     3rd Qu.:     13.8  
-##  Max.   :186708691   Max.   :6111964     Max.   :1695894.0  
-##                                                             
-##  popCommute_car      popCommute_publicT popCommute_bicycle
-##  Min.   :      173   Min.   :      0    Min.   :     0.0  
-##  1st Qu.:      675   1st Qu.:      0    1st Qu.:     0.0  
-##  Median :     1418   Median :      0    Median :     0.0  
-##  Mean   :  3854261   Mean   : 225044    Mean   : 25412.4  
-##  3rd Qu.:     2323   3rd Qu.:      4    3rd Qu.:     0.2  
-##  Max.   :125037241   Max.   :7476312    Max.   :877995.0  
-##                                                           
-##  popCommute_foot   popCommute_other    popCommute_home  
-##  Min.   :      0   Min.   :      0.0   Min.   :      6  
-##  1st Qu.:     10   1st Qu.:      4.8   1st Qu.:     39  
-##  Median :     24   Median :     13.5   Median :     70  
-##  Mean   : 125354   Mean   :  54174.8   Mean   : 197434  
-##  3rd Qu.:     74   3rd Qu.:     49.0   3rd Qu.:    145  
-##  Max.   :4030730   Max.   :1777051.0   Max.   :6661892  
-##                                                         
-##      popBA              popPov          medianIncome    incomeLabor       
-##  Min.   :     123   Min.   :      30   Min.   :38821   Min.   :9.157e+06  
-##  1st Qu.:     360   1st Qu.:     141   1st Qu.:51477   1st Qu.:3.024e+07  
-##  Median :     628   Median :     242   Median :58465   Median :7.037e+07  
-##  Mean   : 1912784   Mean   : 1404789   Mean   :57864   Mean   :2.198e+11  
-##  3rd Qu.:    1025   3rd Qu.:     551   3rd Qu.:63981   3rd Qu.:1.311e+08  
-##  Max.   :64767787   Max.   :46932225   Max.   :76676   Max.   :7.290e+12  
-##                                                                           
-##  incomeLabor_WageSalary incomeLabor_SelfEmpl  incomeInvest      
-##  Min.   :6.118e+06      Min.   :1.200e+06    Min.   :2.723e+05  
-##  1st Qu.:2.618e+07      1st Qu.:4.139e+06    1st Qu.:2.141e+06  
-##  Median :6.255e+07      Median :6.469e+06    Median :3.740e+06  
-##  Mean   :2.056e+11      Mean   :1.412e+10    Mean   :1.401e+10  
-##  3rd Qu.:1.138e+08      3rd Qu.:1.071e+07    3rd Qu.:1.041e+07  
-##  Max.   :6.845e+12      Max.   :4.534e+11    Max.   :4.644e+11  
-##                                                                 
-##   incomeTotal              LF             LF_Civilian       
-##  Min.   :1.554e+07   Min.   :      288   Min.   :      288  
-##  1st Qu.:4.338e+07   1st Qu.:      778   1st Qu.:      778  
-##  Median :8.854e+07   Median :     1677   Median :     1677  
-##  Mean   :2.837e+11   Mean   :  4982562   Mean   :  4948950  
-##  3rd Qu.:1.850e+08   3rd Qu.:     2977   3rd Qu.:     2977  
-##  Max.   :9.502e+12   Max.   :160818740   Max.   :159807099  
-##                                                             
-##  LF_Civilian_Unemployed     LF_Not          housingTotal      
-##  Min.   :      13       Min.   :     187   Min.   :      498  
-##  1st Qu.:      39       1st Qu.:     506   1st Qu.:     1097  
-##  Median :      70       Median :     866   Median :     1948  
-##  Mean   :  396637       Mean   : 2782613   Mean   :  4163607  
-##  3rd Qu.:     153       3rd Qu.:    1987   3rd Qu.:     4143  
-##  Max.   :13488016       Max.   :92504969   Max.   :134054899  
-##                                                               
-##  housingVacant_rent housingVacant_seasonal medianHomeValue 
-##  Min.   :      0    Min.   :     27        Min.   :155600  
-##  1st Qu.:      0    1st Qu.:    300        1st Qu.:184900  
-##  Median :      6    Median :    543        Median :218250  
-##  Mean   :  96786    Mean   : 162998        Mean   :231338  
-##  3rd Qu.:     38    3rd Qu.:   1244        3rd Qu.:268075  
-##  Max.   :3321254    Max.   :5368085        Max.   :360800  
-##                                                            
-##  medianGrossRent    unemplRate     LFparticipationRate
-##  Min.   : 552.0   Min.   : 1.310   Min.   :45.93      
-##  1st Qu.: 823.5   1st Qu.: 3.895   1st Qu.:59.26      
-##  Median : 922.0   Median : 4.963   Median :64.54      
-##  Mean   : 926.8   Mean   : 5.360   Mean   :63.78      
-##  3rd Qu.:1000.5   3rd Qu.: 6.797   3rd Qu.:67.65      
-##  Max.   :1315.0   Max.   :10.935   Max.   :75.95      
-##  NA&#39;s   :1                                            
-##  housingVacant_seasonal_percent housingVacant_rent_percent
-##  Min.   : 1.477                 Min.   :0.0000            
-##  1st Qu.:16.565                 1st Qu.:0.0000            
-##  Median :27.925                 Median :0.1363            
-##  Mean   :29.913                 Mean   :0.8662            
-##  3rd Qu.:41.980                 3rd Qu.:1.2604            
-##  Max.   :68.020                 Max.   :5.1546            
-##                                                           
-##  incomeNonLabor      incomeTransferPayment incomeNonLabor_percent
-##  Min.   :4.101e+06   Min.   :3.828e+06     Min.   :13.60         
-##  1st Qu.:1.312e+07   1st Qu.:1.012e+07     1st Qu.:19.80         
-##  Median :2.047e+07   Median :1.686e+07     Median :25.93         
-##  Mean   :6.394e+10   Mean   :4.993e+10     Mean   :27.09         
-##  3rd Qu.:4.423e+07   3rd Qu.:3.312e+07     3rd Qu.:31.85         
-##  Max.   :2.212e+12   Max.   :1.748e+12     Max.   :53.67         
-##                                                                  
-##  incomeInvest_percent incomeTransferPayment_percent incomeLabor_percent
-##  Min.   : 1.031       Min.   :10.58                 Min.   :46.33      
-##  1st Qu.: 2.542       1st Qu.:15.94                 1st Qu.:68.15      
-##  Median : 4.928       Median :18.44                 Median :74.07      
-##  Mean   : 6.657       Mean   :20.43                 Mean   :72.91      
-##  3rd Qu.: 8.735       3rd Qu.:24.75                 3rd Qu.:80.20      
-##  Max.   :36.817       Max.   :36.41                 Max.   :86.40      
-##                                                                        
-##  popPov_percent   popBA_percent   popMoved_otherState_percent
-##  Min.   : 1.157   Min.   :10.58   Min.   :0.3537             
-##  1st Qu.: 6.630   1st Qu.:15.79   1st Qu.:1.1786             
-##  Median : 8.495   Median :21.53   Median :1.9088             
-##  Mean   : 9.681   Mean   :22.60   Mean   :2.1631             
-##  3rd Qu.:12.705   3rd Qu.:27.98   3rd Qu.:2.7998             
-##  Max.   :21.167   Max.   :43.13   Max.   :7.7385             
-##                                                              
-##  popMoved_abroad_percent popMoved_percent  popCommute_car_percent
-##  Min.   :0.0000          Min.   : 0.3537   Min.   :31.98         
-##  1st Qu.:0.0000          1st Qu.: 1.2728   1st Qu.:40.47         
-##  Median :0.0000          Median : 2.0825   Median :44.18         
-##  Mean   :0.3554          Mean   : 2.5185   Mean   :43.82         
-##  3rd Qu.:0.3727          3rd Qu.: 3.2062   3rd Qu.:47.22         
-##  Max.   :7.7634          Max.   :11.0906   Max.   :54.78         
-##                                                                  
-##  popCommute_publicT_percent popCommute_bicycle_percent
-##  Min.   :0.0000             Min.   :0.00000           
-##  1st Qu.:0.0000             1st Qu.:0.00000           
-##  Median :0.0000             Median :0.00000           
-##  Mean   :0.1775             Mean   :0.08443           
-##  3rd Qu.:0.1488             3rd Qu.:0.00840           
-##  Max.   :2.3469             Max.   :1.08887           
-##                                                       
-##  popCommute_foot_percent popCommute_other_percent popCommute_home_percent
-##  Min.   :0.0000          Min.   :0.0000           Min.   : 0.3981        
-##  1st Qu.:0.4395          1st Qu.:0.2175           1st Qu.: 1.6705        
-##  Median :0.8309          Median :0.5455           Median : 2.3043        
-##  Mean   :1.2211          Mean   :0.7564           Mean   : 2.9100        
-##  3rd Qu.:1.5008          3rd Qu.:0.8935           3rd Qu.: 3.6064        
-##  Max.   :6.6234          Max.   :3.9224           Max.   :15.8965        
-##                                                                          
-##       Year          benchM   
-##  Min.   :2011   Min.   :1.0  
-##  1st Qu.:2011   1st Qu.:1.0  
-##  Median :2014   Median :1.5  
-##  Mean   :2014   Mean   :1.5  
-##  3rd Qu.:2016   3rd Qu.:2.0  
-##  Max.   :2016   Max.   :2.0  
-##                 NA&#39;s   :60
-levels(data$Town)
-##  [1] &quot;Alexandria&quot;     &quot;Alton&quot;          &quot;Andover&quot;        &quot;Ashland&quot;       
-##  [5] &quot;Barnstead&quot;      &quot;Belmont&quot;        &quot;Bridgewater&quot;    &quot;Bristol&quot;       
-##  [9] &quot;Center Harbor&quot;  &quot;Danbury&quot;        &quot;Effingham&quot;      &quot;Franklin&quot;      
-## [13] &quot;Freedom&quot;        &quot;Gilford&quot;        &quot;Gilmanton&quot;      &quot;Hebron&quot;        
-## [17] &quot;Hill&quot;           &quot;Holderness&quot;     &quot;Laconia&quot;        &quot;Meredith&quot;      
-## [21] &quot;Moultonborough&quot; &quot;New Hampshire&quot;  &quot;New Hampton&quot;    &quot;Northfield&quot;    
-## [25] &quot;Ossipee&quot;        &quot;Sanbornton&quot;     &quot;Sandwich&quot;       &quot;Tamworth&quot;      
-## [29] &quot;Tilton&quot;         &quot;Tuftonboro&quot;     &quot;United States&quot;  &quot;Wolfeboro&quot;</code></pre>
+summary(data)</code></pre>
 </div>
-<div id="exploratory-data-analysis" class="section level2">
-<h2>Exploratory data analysis</h2>
-<p>What are some graphical tools for numerical data? When is one more appropriate than another?</p>
-<pre class="r"><code># Load packages
-library(ggplot2)
+<div id="geofacet" class="section level2">
+<h2>Geofacet</h2>
+<pre class="r"><code>library(geofacet)
+# Create a grid, nh_grid for use of geofacet package
+nameTown &lt;- c(&quot;Sandwich&quot;, &quot;Tamworth&quot;, &quot;Freedom&quot;, &quot;Hebron&quot;, &quot;Ashland&quot;, &quot;Holderness&quot;, &quot;Center Harbor&quot;, &quot;Moultonborough&quot;, &quot;Tuftonboro&quot;, &quot;Ossipee&quot;, &quot;Effingham&quot;, &quot;Alexandria&quot;, &quot;Bristol&quot;, &quot;Bridgewater&quot;, &quot;New Hampton&quot;, &quot;Meredith&quot;, &quot;Laconia&quot;, &quot;Gilford&quot;, &quot;Wolfeboro&quot;, &quot;Danbury&quot;, &quot;Hill&quot;, &quot;Sanbornton&quot;, &quot;Belmont&quot;, &quot;Alton&quot;, &quot;Andover&quot;, &quot;Franklin&quot;, &quot;Tilton&quot;, &quot;Gilmanton&quot;, &quot;Northfield&quot;, &quot;Barnstead&quot;)
+code &lt;- c(&quot;Sw&quot;, &quot;Tw&quot;, &quot;Fd&quot;, &quot;Hb&quot;, &quot;Al&quot;, &quot;Hn&quot;, &quot;Ch&quot;, &quot;Mb&quot;, &quot;Tb&quot;, &quot;Op&quot;, &quot;Eh&quot;, &quot;Ad&quot;, &quot;Bt&quot;, &quot;Bw&quot;, &quot;Nh&quot;, &quot;Md&quot;, &quot;Ln&quot;, &quot;Gf&quot;, &quot;Wb&quot;, &quot;Db&quot;, &quot;Hl&quot;, &quot;Sb&quot;, &quot;Bm&quot;, &quot;At&quot;, &quot;Av&quot;, &quot;Fk&quot;, &quot;Tt&quot;, &quot;Gm&quot;, &quot;Nf&quot;, &quot;Bs&quot;)
+row &lt;- c(1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,4,3,3,4,4,4,5,4,5,5,5,5,6,6)
+col &lt;- c(6,7,9,1,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,1,2,4,6,8,2,3,4,7,4,8)
+nh_grid &lt;- data.frame(nameTown, code, row, col)
+
+data_geo &lt;- data
+colnames(data_geo)[colnames(data_geo) == &quot;Town&quot;] &lt;- &quot;nameTown&quot;
+
 library(dplyr)
+library(ggplot2)
 library(tidyr)
+
 data %&gt;%
-  filter(!Town %in% c(&quot;United States&quot;, &quot;New Hampshire&quot;)) %&gt;%
-  select(Town, popTotal, Year) %&gt;%
+  select(Town, incomeLabor_SelfEmpl, Year, benchM) %&gt;%
   mutate(Year = paste0(&quot;Yr&quot;,Year)) %&gt;%
-  spread(Year, popTotal) %&gt;%
-  ggplot(aes(reorder(x = Town, Yr2016-Yr2011), y = Yr2016-Yr2011, fill = Yr2016-Yr2011 &gt; 0)) +
-  geom_col() +
+  spread(Year, incomeLabor_SelfEmpl) %&gt;%
+  ggplot(aes(reorder(x = Town, (Yr2016-Yr2011)/Yr2011), y = (Yr2016-Yr2011)/Yr2011, fill = benchM)) +
+  geom_col(show.legend = FALSE) +
   coord_flip() +
-  labs(title = &quot;Population Change between 2007-2011 and 2012-2016&quot;,
-       x = &quot;Number of People&quot;,
-       y = NULL)</code></pre>
+  labs(title = &quot;Percent Change in Self-Employment Income between 2007-11 and 2012-16&quot;,
+       x = NULL,
+       y = &quot;Percent Change in Income&quot;)</code></pre>
 <p><img src="/post/2018-05-24-economic-and-demographic-trends-in-lakes-region_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="percent-change-by-geofacet" class="section level2">
+<h2>Percent change by geofacet</h2>
+<pre class="r"><code>library(stringr)
+data_geo %&gt;%
+  filter(!nameTown %in% c(&quot;United States&quot;, &quot;New Hampshire&quot;)) %&gt;%
+  select(nameTown, incomeLabor_SelfEmpl, incomeLabor_WageSalary, Year) %&gt;%
+  mutate(Year = paste0(&quot;Yr&quot;,Year),) %&gt;%
+  gather(var, value, c(&quot;incomeLabor_SelfEmpl&quot;, &quot;incomeLabor_WageSalary&quot;)) %&gt;%
+  mutate(var = str_extract(var, &quot;Self|Wage&quot;)) %&gt;% #change the text for shorter axis text in graph
+  spread(Year, value)  %&gt;%
+  ggplot(aes(x = var, y = (Yr2016-Yr2011)/Yr2011, fill = Yr2016-Yr2011 &gt; 0)) + 
+  geom_col() +
+  facet_geo(~ nameTown, grid = nh_grid) +
+  labs(title = &quot;Percent Changes in Income between 2007-11 and 2012-16&quot;,
+       x = NULL,
+       y = NULL,
+       caption = &quot;Data source: American Community Survey, 5-year estimate&quot;) +
+  theme(axis.ticks.x=element_blank(),
+        legend.position= c(0,0.05),
+        legend.title=element_blank()) + 
+  scale_fill_discrete(labels=c(&quot;Decrease&quot;, &quot;Increase&quot;))</code></pre>
+<p><img src="/post/2018-05-24-economic-and-demographic-trends-in-lakes-region_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>

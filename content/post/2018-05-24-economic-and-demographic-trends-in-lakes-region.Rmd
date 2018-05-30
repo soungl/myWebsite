@@ -1,12 +1,11 @@
 ---
-title: Economic and Demographic Trends in Lakes Region
+title: Growth of Entrepreneurial Acitivity in Lakes Region
 author: Daniel Lee
-date: '2018-05-24'
-slug: economic-and-demographic-trends-in-lakes-region
+date: '2018-05-25'
+slug: growth-of-entrepreneurial-acitivity-in-lakes-region
 categories:
   - R
 tags:
-  - plot
   - R Markdown
 ---
 
@@ -17,34 +16,65 @@ knitr::opts_chunk$set(message = F, warning = F, collapse = T, echo = T, results 
 
 ## Import and get a sense of data
 
-```{r}
+```{r results="hide"}
 # Import data
 data <- read.csv("data/census2.csv")
 
 str(data)
 
 summary(data)
-levels(data$Town)
 ```
 
-## Exploratory data analysis
-What are some graphical tools for numerical data? When is one more appropriate than another?
+## Geofacet
 ```{r}
-# Load packages
-library(ggplot2)
+library(geofacet)
+# Create a grid, nh_grid for use of geofacet package
+nameTown <- c("Sandwich", "Tamworth", "Freedom", "Hebron", "Ashland", "Holderness", "Center Harbor", "Moultonborough", "Tuftonboro", "Ossipee", "Effingham", "Alexandria", "Bristol", "Bridgewater", "New Hampton", "Meredith", "Laconia", "Gilford", "Wolfeboro", "Danbury", "Hill", "Sanbornton", "Belmont", "Alton", "Andover", "Franklin", "Tilton", "Gilmanton", "Northfield", "Barnstead")
+code <- c("Sw", "Tw", "Fd", "Hb", "Al", "Hn", "Ch", "Mb", "Tb", "Op", "Eh", "Ad", "Bt", "Bw", "Nh", "Md", "Ln", "Gf", "Wb", "Db", "Hl", "Sb", "Bm", "At", "Av", "Fk", "Tt", "Gm", "Nf", "Bs")
+row <- c(1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,4,3,3,4,4,4,5,4,5,5,5,5,6,6)
+col <- c(6,7,9,1,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,1,2,4,6,8,2,3,4,7,4,8)
+nh_grid <- data.frame(nameTown, code, row, col)
+
+data_geo <- data
+colnames(data_geo)[colnames(data_geo) == "Town"] <- "nameTown"
+
 library(dplyr)
+library(ggplot2)
 library(tidyr)
+
 data %>%
-  filter(!Town %in% c("United States", "New Hampshire")) %>%
-  select(Town, popTotal, Year) %>%
+  select(Town, incomeLabor_SelfEmpl, Year, benchM) %>%
   mutate(Year = paste0("Yr",Year)) %>%
-  spread(Year, popTotal) %>%
-  ggplot(aes(reorder(x = Town, Yr2016-Yr2011), y = Yr2016-Yr2011, fill = Yr2016-Yr2011 > 0)) +
-  geom_col() +
+  spread(Year, incomeLabor_SelfEmpl) %>%
+  ggplot(aes(reorder(x = Town, (Yr2016-Yr2011)/Yr2011), y = (Yr2016-Yr2011)/Yr2011, fill = benchM)) +
+  geom_col(show.legend = FALSE) +
   coord_flip() +
-  labs(title = "Population Change between 2007-2011 and 2012-2016",
-       x = "Number of People",
-       y = NULL)
+  labs(title = "Percent Change in Self-Employment Income between 2007-11 and 2012-16",
+       x = NULL,
+       y = "Percent Change in Income")
+
+
 ```
 
-
+## Percent change by geofacet
+```{r}
+library(stringr)
+data_geo %>%
+  filter(!nameTown %in% c("United States", "New Hampshire")) %>%
+  select(nameTown, incomeLabor_SelfEmpl, incomeLabor_WageSalary, Year) %>%
+  mutate(Year = paste0("Yr",Year),) %>%
+  gather(var, value, c("incomeLabor_SelfEmpl", "incomeLabor_WageSalary")) %>%
+  mutate(var = str_extract(var, "Self|Wage")) %>% #change the text for shorter axis text in graph
+  spread(Year, value)  %>%
+  ggplot(aes(x = var, y = (Yr2016-Yr2011)/Yr2011, fill = Yr2016-Yr2011 > 0)) + 
+  geom_col() +
+  facet_geo(~ nameTown, grid = nh_grid) +
+  labs(title = "Percent Changes in Income between 2007-11 and 2012-16",
+       x = NULL,
+       y = NULL,
+       caption = "Data source: American Community Survey, 5-year estimate") +
+  theme(axis.ticks.x=element_blank(),
+        legend.position= c(0,0.05),
+        legend.title=element_blank()) + 
+  scale_fill_discrete(labels=c("Decrease", "Increase"))
+```
