@@ -28,4 +28,10 @@ caption = "My caption :smile:"
 
 +++
 
+**The 2018 Study**
+
 This project is in progress and expected to be completed by July, 2018.
+
+**The 2013 Study**
+
+A press release on this study can be found here <http://www.wmur.com/article/new-hampshire-ski-industry-adds-record-sales-to-state-tourist-market/5188297>.
