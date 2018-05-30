@@ -23,7 +23,7 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "nbrc.png"
+image = ""
 caption = "My caption :smile:"
 
 +++

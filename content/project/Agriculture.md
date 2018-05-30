@@ -23,16 +23,16 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "ag.jpg"
+image = ""
 caption = "My caption :smile:"
 
 +++
 
-ECONOMIC IMPACT STUDY, Fiscal Year 2013
+Fiscal Year 2013
 
 **Methodology** 
 
-The economic impact study was based on data from the U.S.D.A., the Bureau of Economic Analysis,and the New Hampshire Department of Agriculture.This data was used in the development of an economic impact model used to determine the direct, indirect,and induced spending related to the various sectors of the industry (see full report for details).
+The economic impact study was based on data from the U.S.D.A., the Bureau of Economic Analysis,and the New Hampshire Department of Agriculture.This data was used in the development of an economic impact model used to determine the direct, indirect,and induced spending related to the various sectors of the industry.
 
 **Purpose** 
 

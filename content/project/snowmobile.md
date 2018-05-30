@@ -6,7 +6,7 @@ date = 2012-07-25T00:00:00
 title = "Economic Impact Study for the New Hampshire Snowmobile Association"
 
 # Project summary to display on homepage.
-summary = "The ski inudstry makes a huge contribution to the region's economy."
+summary = "The New Hampshire Snowmobile Association commissioned Daniel Lee of Plymouth State University to estimate economic contribution of the snowmobile industry to New Hampshire's economy"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "snowmobile.jpg"
@@ -23,9 +23,9 @@ math = false
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
-image = "snowmobile.jpg"
+image = ""
 caption = "My caption :smile:"
 
 +++
 
-This project is in progress and expected to be completed by July, 2018.
+To view the report, click this [link](http://headwaterseconomics.org/wp-content/uploads/Trail_Study_59-new-hampshire-snowmobiling.pdf) here.
