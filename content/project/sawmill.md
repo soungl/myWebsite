@@ -6,7 +6,7 @@ date = 2016-08-25T00:00:00
 title = "Economic Impact of Sawmills"
 
 # Project summary to display on homepage.
-summary = "The ski inudstry makes a huge contribution to the region's economy."
+summary = "The New Hampshire Timber Owners Association (NHTOA) has asked Daniel Lee of the Center for Rural Partnerships and the College of Business Administration to study and document the economic activity of a sample of New Hampshire sawmills."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "sawmill.jpg"
@@ -28,4 +28,4 @@ caption = "My caption :smile:"
 
 +++
 
-This project is in progress and expected to be completed by July, 2018.
+To view the report, click this [link](https://www.nhtoa.org/advocacy-legislation/research/84-economic-contribution-of-the-sawmill-industry-in-new-hampshire-calendar-year-2014.html) here.

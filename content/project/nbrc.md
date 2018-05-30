@@ -6,7 +6,7 @@ date = 2017-11-25T00:00:00
 title = "Northern Border Regional Commission Annual Economic & Demographic Research"
 
 # Project summary to display on homepage.
-summary = "The Northern Border Regional Commission asked Daniel Lee at Plymouth State University to collect data in assisting the federal government agency to assess the level of economic and demographic distress within its region."
+summary = "The Northern Border Regional Commission asked Daniel Lee of Plymouth State University to collect data in assisting the federal government agency to assess the level of economic and demographic distress within its region."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "nbrc.png"

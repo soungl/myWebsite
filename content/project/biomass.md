@@ -6,7 +6,7 @@ date = 2016-12-25T00:00:00
 title = "Economic Impact of Biomass Electric Power Plants"
 
 # Project summary to display on homepage.
-summary = "The New Hampshire Timberland Owners Associations commissioned Daniel Lee at Plymouth State University to estimate economic contribution of the 25 MW capacity or less biomass electric power generation industry to New Hampshire’s economy. "
+summary = "The New Hampshire Timberland Owners Associations commissioned Daniel Lee of Plymouth State University to estimate economic contribution of the 25 MW capacity or less biomass electric power generation industry to New Hampshire’s economy. "
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "biomass.jpg"
