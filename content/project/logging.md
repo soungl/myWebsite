@@ -6,7 +6,7 @@ date = 2014-09-25T00:00:00
 title = "Economic Impact of the Logging Industry"
 
 # Project summary to display on homepage.
-summary = "The New Hampshire Timber Owners Association (NHTOA) has asked Daniel Lee of the Center for Rural Partnerships and the College of Business Administration to study and document the economic activity of a sample of New Hampshire timber harvesting companies."
+summary = "The New Hampshire Timber Owners Association commissioned Daniel Lee of Plymouth State University to study and document the economic activity of a sample of New Hampshire timber harvesting companies."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "logging.jpg"
