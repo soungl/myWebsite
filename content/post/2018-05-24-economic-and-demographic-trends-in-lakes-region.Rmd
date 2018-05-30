@@ -11,7 +11,7 @@ tags:
 
 ```{r setup, include=FALSE}
 # Set the global option
-knitr::opts_chunk$set(message = F, warning = F, collapse = T, echo = T, results = 'markup')
+knitr::opts_chunk$set(message = F, warning = F, collapse = T, echo = F, results = 'hide')
 ```
 
 ## Import and get a sense of data
