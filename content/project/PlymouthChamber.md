@@ -13,7 +13,7 @@ image_preview = "Plymouth.jpg"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-impact-study"]
+tags = ["economic-analysis"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
