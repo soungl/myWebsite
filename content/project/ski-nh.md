@@ -6,7 +6,7 @@ date = 2018-05-25T00:00:00
 title = "Economic Impact Study for Ski NH"
 
 # Project summary to display on homepage.
-summary = "The ski inudstry makes a huge contribution to the region's economy."
+summary = "The ski NH commissioned Daniel Lee at Plymouth State University to estimate economic contribution of the ski industry to New Hampshire's economy"
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "ski-nh.jpg"
