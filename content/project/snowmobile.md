@@ -12,8 +12,8 @@ summary = "The New Hampshire Snowmobile Association commissioned Daniel Lee of P
 image_preview = "snowmobile.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-impact-study"]
+# Example: `tags = ["economic-impact-study", "economic-analysis", "tourism-research"]`
+tags = ["economic-impact-study", "tourism-research"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -41,8 +41,8 @@ filter_default = 0
   tag = ".economic-analysis"
   
 [[filter]]
-  name = "Other"
-  tag = ".demo"
+  name = "Tourism-Research"
+  tag = ".tourism-research"
 
 +++
 

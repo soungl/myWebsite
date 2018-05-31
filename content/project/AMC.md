@@ -12,8 +12,8 @@ summary = "The Appalachian Mountain Club (AMC) requested Daniel of Plymouth Stat
 image_preview = "AMC.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-impact-study"]
+# Example: `tags = ["economic-impact-study", "economic-analysis", "tourism-research"]`
+tags = ["economic-impact-study", "tourism-research"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

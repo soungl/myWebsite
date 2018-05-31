@@ -32,19 +32,19 @@ In assisting the Northern Border Regional Commission (NBRC) to assess the level 
 
 *Data:*
 
-1. percent below poverty level; 
-2. unemployment rate; 
-3. percent change in population; 
-4. percent bachelor's degree or higher; 
-5. median household income; 
-6. percent of seasonal home
+* percent below poverty level;
+* unemployment rate;
+* percent change in population;
+* percent bachelor's degree or higher;
+* median household income;
+* percent of seasonal home
 
-*Geography:* 
+*Geography:*
 
-1. municipalities, 
-2. counties, 
-3. congressional districts, 
-4. states, and 
-5. the U.S.
+* municipalities,
+* counties,
+* congressional districts,
+* states, and
+* the U.S.
 
-The summary of the data can be found at <http://rpubs.com/DanielSLee/NBRC>.
+The summary of the data can be found at http://rpubs.com/DanielSLee/NBRC.
