@@ -33,6 +33,10 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
+  name = "Data Analytics"
+  tag = ".data-analytics"
+  
+[[filter]]
   name = "Economic Impact Study"
   tag = ".economic-impact-study"
 
