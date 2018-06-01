@@ -12,8 +12,8 @@ summary = "The New Hampshire Division of Travel and Tourism Development commissi
 image_preview = "dttd.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis", "tourism-research"]`
-tags = ["tourism-research"]
+# Example: `tags = ["economic-impact", "economics", "tourism"]`
+tags = ["tourism"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

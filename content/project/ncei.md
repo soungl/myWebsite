@@ -12,8 +12,8 @@ summary = "Daniel Lee created the North Country Economic Index, a quarterly econ
 image_preview = "coos.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-analysis"]
+# Example: `tags = ["economic-impact", "economics"]`
+tags = ["economics"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

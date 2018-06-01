@@ -37,16 +37,16 @@ filter_default = 0
   tag = ".data-analytics"
   
 [[filter]]
-  name = "Economic Impact Study"
-  tag = ".economic-impact-study"
+  name = "Economic Impact"
+  tag = ".economic-impact"
 
 [[filter]]
-  name = "Economic Analysis"
-  tag = ".economic-analysis"
+  name = "Economics"
+  tag = ".economics"
   
 [[filter]]
-  name = "Tourism-Research"
-  tag = ".tourism-research"
+  name = "Tourism"
+  tag = ".tourism"
 
 +++
 

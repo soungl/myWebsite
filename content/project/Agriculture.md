@@ -12,8 +12,8 @@ summary = "The New Hampshire Department of Agriculture commissioned Daniel Lee o
 image_preview = "ag.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-impact-study"]
+# Example: `tags = ["economic-impact", "economics"]`
+tags = ["economic-impact"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

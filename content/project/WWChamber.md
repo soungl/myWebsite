@@ -12,8 +12,8 @@ summary = "The Western White Mountain Chamber of Commerce Commissioned the OakLe
 image_preview = "WWChamber.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis", "tourism-research"]`
-tags = ["economic-analysis", "tourism-research"]
+# Example: `tags = ["economic-impact", "economics", "tourism"]`
+tags = ["economics", "tourism"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

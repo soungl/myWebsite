@@ -12,8 +12,8 @@ summary = "The New Hampshire Timber Owners Association commissioned Daniel Lee o
 image_preview = "logging.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis"]`
-tags = ["economic-impact-study"]
+# Example: `tags = ["economic-impact", "economics"]`
+tags = ["economic-impact"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""

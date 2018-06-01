@@ -12,8 +12,8 @@ summary = "The ski NH commissioned Daniel Lee of Plymouth State University to es
 image_preview = "ski-nh.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["economic-impact-study", "economic-analysis", "tourism-research"]`
-tags = ["economic-impact-study", "tourism-research"]
+# Example: `tags = ["economic-impact", "economics", "tourism"]`
+tags = ["economic-impact", "tourism"]
 
 # Optional external URL for project (replaces project detail page).
 external_link = ""
