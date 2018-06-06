@@ -1,11 +1,10 @@
 ---
-title: Entrepreneurial Activity in Lakes Region, New Hampshire
+title: Measuring Entrepreneurial Activity in Lakes Region, New Hampshire
 author: Daniel Lee
 date: '2018-06-06'
-slug: entrepreneurial-activity-in-lakes-region-new-hampshire
 categories:
   - R
-tags: []
+slug: entrepreneurial-activity-in-lakes-region-new-hampshire
 ---
 
 
