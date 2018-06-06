@@ -6,7 +6,7 @@ date = 2015-10-25T00:00:00
 title = "Economic Impact of Appalachian Mountain Club"
 
 # Project summary to display on homepage.
-summary = "The Appalachian Mountain Club (AMC) requested Daniel of Plymouth State University to update a 1995 report characterizing economic impact of AMC in New Hampshire."
+summary = "The Appalachian Mountain Club (AMC) requested Daniel Lee of Plymouth State University to update a 1995 report characterizing economic impact of AMC in New Hampshire."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "AMC.jpg"
