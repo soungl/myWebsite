@@ -1,0 +1,68 @@
+---
+title: Measuring  Entrepreneurial Activity in Lakes Region, New Hampshire
+author: Daniel Lee
+date: '2018-06-08'
+slug: measuring-entrepreneurial-activity-in-lakes-region-new-hampshire
+categories: []
+tags: []
+---
+
+
+
+<p>This is my first blog. So I am a bit nervous. I’ve given some thought to what to write and in what style. I’m not familiar with blogging and social media in general. So if you have any suggestions, please feel free to share.</p>
+<p>I decided to blog to share my work in data analytics, which I’ve become so passionate about for the past few years. I want my blog posts to be informal and plan to share brief but interesting data analyses. The code for the analysis can be found in my GitHub account. Click <a href="https://github.com/soungl/Entrepreneurial-Activity-in-Lakes-Region">here</a>.</p>
+<div id="question-i-want-to-answer" class="section level2">
+<h2>Question I want to answer</h2>
+<p>My first blog is about a project my students did during this past semester. At the beginning of the semester, Jeff Hayes, my old friend and the executive director of the Lakes Region Planning Commission, asked me to consider an economic study as a student project in one of my data analytics courses. The analysis below is one of those student projects I refined and developed further just for fun. The students wanted to examine the level of the entrepreneurial activity in the Lakes Region.</p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>As a proxy for the entrepreneurial activity, students used town-level (county subdivision, to be more accurate) personal income data from the U.S. Census: American Community Survey, 5-year estimates over 2012-2016.</p>
+<p>Personal income is one of primary sources of data for sub-state level economic analysis along with employment and population. Components of personal income is also useful to study the makeup of the resident population: for example, a high proportion of investment income may be indicative of a high quality of life and thus a large affluent retiree population in rural places like New Hampshire’s Lakes Region. See below for the definition of the income variables used in this analysis. All incomes below are aggregated incomes for towns.</p>
+<ul>
+<li>total personal income = labor income + non-labor income
+<ul>
+<li>labor income = self-employment income + wage and salary income</li>
+<li>non-labor income = investment income + transfer payment income
+<ul>
+<li>investment income = interest income + dividend payments + rental income</li>
+<li>transfer payment income = social security income + welfare + medicare + medicaid.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Why are they important?</p>
+<ul>
+<li>Wage and salary income: An increase in wage and salary income may suggest an increase in the number of jobs, an increase in the proportion of higher-paying jobs, or a combination of both. In all cases, an increase in wage and salary income is positive news.</li>
+<li>Labor versus non-labor income: While an increase in labor income reflects a rise in the economic activity in the area, an increase in non-labor income may not indicate the same. Nonetheless, non-labor income is an important source of income, often for rural communities.</li>
+<li>Components of non-labor income: non-labor income comprises of two sources: 1) investment income and 2) transfer payment income. The ratio between the two may be suggest the makeup of the residents. Towns with a high proportion of investment income in total non-labor income may reflect a large affluent population with property and investment income.</li>
+</ul>
+</div>
+<div id="where-in-the-lakes-region-do-we-have-entrepreneurs" class="section level2">
+<h2>Where in the Lakes Region do we have entrepreneurs?</h2>
+<p>Lake Winnipesaukee appears to be the center of the entrepreneurial activity in the Lakes Region with Laconia at the top, followed by Wolfeboro, Gilford, Moultonborough and Meredith. However, Laconia’s top rank may just reflect a larger population and may not necessarily mean that the city is more entrepreneurial than other places in the region.<br />
+<img src="/post/2018-06-08-measuring-entrepreneurial-activity-in-lakes-region-new-hampshire_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="which-towns-are-more-entrepreneurial-on-a-per-person-basis" class="section level2">
+<h2>Which towns are more entrepreneurial on a per-person basis?</h2>
+<p>Therefore, in order to control for the size of population, I divided the aggregate self-employment income by population. Surprisingly, in more than half of the towns in the Lakes Region, residents earn more income from their own business than the rest of the state on a per-person basis. For example, a typical person in Sandwich earn nearly $5,000 a year, in comparison to less than $2,000 a year for New Hampshire. Again, does this mean these towns are more entrepreneurial?</p>
+<p><img src="/post/2018-06-08-measuring-entrepreneurial-activity-in-lakes-region-new-hampshire_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="taking-into-account-wage-and-salary-income" class="section level2">
+<h2>Taking into account wage and salary income</h2>
+<p>A larger self-employment income may or may not mean a high level of the entrepreneurial activity. It may rather reflect lack of wage and salary jobs as people are forced to work for themselves. For example, the share of self-employment usually rises during a recession when jobs become scarce.</p>
+<p>In order to better gauge the level of the entrepreneurial activity, therefore, one should also consider wage and salary employment. When an increase in self-employment income is coupled with an increase in wage and salary income, it’s likely mean an increase in the entrepreneurial activity.</p>
+<p>The chart below illustrates that all but one Lakes Region town rank below New Hampshire in per-capita wage and salary income, which suggests relative lack of job opportunity in the area. Only Gilford rank higher than the rest of the state. In addition, a majority of the towns in the region rank below the United States. It speaks volumes about lack of jobs, in particular high-paying jobs.</p>
+<p><img src="/post/2018-06-08-measuring-entrepreneurial-activity-in-lakes-region-new-hampshire_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>When looking at labor income as a whole, which is the sum of self-employment income and wage and salary income, the story remains the same. Only Gilford and Sanbornton earn more income from the current labor, in comparison to the rest of the state.</p>
+<p><img src="/post/2018-06-08-measuring-entrepreneurial-activity-in-lakes-region-new-hampshire_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>However, when looking at total personal income that also includes non-labor income, many towns rise above the state level in the ranking largely reflecting a large rich retiree population in the Lakes Region. The rise of Moultonborough is particularly noticeable. Total income is the sum of labor income and non-labor income, which comprises 1) investment income (interest, dividends, and rental income) and 2) transfer payment income (social security, Medicare, welfare, etc.).</p>
+<p><img src="/post/2018-06-08-measuring-entrepreneurial-activity-in-lakes-region-new-hampshire_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="what-did-we-learn" class="section level2">
+<h2>What did we learn?</h2>
+<ul>
+<li>Lake Winnipesaukee is the center of the economic activity in the Lakes Region. Economic revitalization of the Lakes Region cannot be done without revitalization of Lake Winnipesaukee areas.</li>
+<li>A high self-employment income per capita in many Lakes Region towns likely reflect lack of quality jobs, rather than a high level of the entrepreneurial activity.</li>
+<li>Non-labor incomes are an important source of income for many Lakes Region towns. It suggests that conservation efforts are critical to keep the region attractive to affluent retirees who seek a high quality of life.</li>
+</ul>
+</div>
