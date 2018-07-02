@@ -1,0 +1,69 @@
+---
+title: Drug Overdose Crisis in New Hampshire
+author: Daniel Lee
+date: '2018-07-02'
+slug: drug-overdose-crisis-in-new-hampshire
+categories: []
+tags:
+  - Data
+  - Data Science
+  - Data Analytics
+  - Data Visualization
+  - R
+  - Drug Overdose
+  - Opioid Crisis
+  - Opioid Epidemic
+---
+
+
+
+<div id="question-i-want-to-answer" class="section level2">
+<h2>Question I want to answer</h2>
+<p>I recently read a New York Times article on the drug overdose crisis in New Hampshire. The article reported that the State has the second highest drug-induced death rate in the country. My initial thought was that it could not be. I mean I heard of the problem, but the second worst in the whole country? The State consistently ranks at or near the top of many criteria, including median household income and educational attainment. After all, isn’t New Hampshire one of the most livable states in the country? I couldn’t help but dig data myself. How bad is it really?</p>
+<p>The code in the anlaysis can be found in my GitHub account. Click <a href="https://github.com/soungl/drugOverdose">here</a>.</p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>To gauge the severity of the drug overdose crisis in New Hampshire, I used the age-adjusted death rate, which is defined as the number of drug-induced deaths per 100,000 persons that is adjusted to the age distribution. It is a standard way to compare the death rate between different places or between different periods. By adjusting the death rate for the age distribution, we can ensure that a difference in death rates is not attributed to a difference in age distributions. This is because, say, an 80-year old person is more likely to die than a 20-year old person is. In other words, other things being equal, the death rate is likely to be higher in a state with an older population than in a state with a younger population.</p>
+<p>The data was obtained from Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death 1999-2016 on CDC WONDER Online Database, released December 2017.</p>
+</div>
+<div id="outbreak-of-new-hampshires-drug-overdose-epidemic-since-2013" class="section level2">
+<h2>Outbreak of New Hampshire’s drug overdose epidemic since 2013</h2>
+<p>The drug-induced death rate in New Hampshire had been more or less along the national average until 2013. However, it has since exploded. The year 2013 marks a clear structural break. Hence, I divided the data into two periods: before and after 2013 for the analysis below.</p>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="before-and-after-2013" class="section level2">
+<h2>Before and after 2013</h2>
+<p>While the drug-induced death rate nearly doubled between before and after 2013 in the United States, it more than tripled in New Hampshire.</p>
+<ul>
+<li>The drug-induced death rate almost doubled in the United States between the two periods. Until 2013, only New Mexico recorded more than 20 deaths per 100,000 persons annually, while more than a third of the 50 states and the District of Columbia exceeded this mark since 2013.</li>
+<li>The situation is much more dire in New Hampshire. The drug-induced death rate more than tripled in New Hampshire during the same period. New Hampshire, one of the safer states below the national average prior to 2013, is now one of the most dangerous battlegrounds of the drug epidemic in the country.</li>
+<li>The data also indicates a geographic pattern in the current drug overdose crisis. That is, while there are no parts of the country that is not ailing from drug overdose, the country’s northeastern region is hit hardest. Until 2013, only one northeastern state, Rhode Island, made the top 10, while the number increased to five since 2013. The top 10 list now includes New Hampshire (2nd), Pennsylvania (5th), Rhode Island (6th), Massachusetts (7th) and Delaware (9th).</li>
+</ul>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>So naturally, I got curious about the rate of increases. As I suspected, the list of states with the ten fastest growing drug-induced death rates is dominated by the northeastern states: there are only three non-northeastern states on the list. New Hampshire topped the list. No other states saw the pace of increases anywhere close to that of New Hampshire.</p>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="new-hampshires-ailing-young-people" class="section level2">
+<h2>New Hampshire’s ailing young people</h2>
+<p>When broken down by age groups, it gets even more concerning. Not only is drug overdose a major challenge that New Hampshire faces today but also is likely here to stay for decades to come. While it is middle-aged people at the age of 45-54 that is ailing most from drug overdose in the country, it is young people at the age of 25-34 that is suffering most in New Hampshire. Furthermore, the drug overdose death rate for young people at the age of 25-34 is nearly three times as high in New Hampshire as in the rest of the country. The drug epidemic has the State as hostage. The State does not have enough young people, and many young people it does have are suffering from drug addiction.</p>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="new-hampshires-south-versus-north" class="section level2">
+<h2>New Hampshire’s south versus north</h2>
+<p>Examining the data by subsections of the State provides additional insights. Drug overdose was largely the North Country’s problem until 2013. The current drug crisis, however, largely driven by southern parts of the State. Carroll and Belknap, New Hampshire’s top two counties in the drug-induced death rate until 2013, are now replaced by Strafford and Hillsborough.</p>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>In terms of the rate of increases in the drug-induced death rate between before and after 2013, three southern counties - Strafford, Hillsborough, and Rockingham - topped the State. This is particularly alarming because they are the industrial base of the State’s economy. It is hard to imagine economic prosperity in the State of New Hampshire with these three counties reeling from drug overdose deaths. The Strafford County is losing its residents to drug overdose at a rate that is more than four times the national average. Moreover, we know that many of these casualties are young people who are supposed to lead the State into a promising future.</p>
+<p><img src="/post/2018-07-02-drug-overdose-crisis-in-new-hampshire_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="what-did-we-learn" class="section level2">
+<h2>What did we learn?</h2>
+<ul>
+<li>Drug-induced deaths exploded in New Hampshire since 2013.</li>
+<li>New Hampshire has the second highest rate of drug-induced deaths in the country.</li>
+<li>Furthermore, the State is by far the number one in terms of the pace of increases in the recent past.</li>
+<li>Young people are ailing most from drug overdose in New Hampshire, contrary to the national pattern. The drug overdose death rate for young people at the age of 25-34 is nearly three times as high in New Hampshire as in the rest of the country. It may imply that, for New Hampshire, the drug overdose epidemic is not only a challenge today but also for decades to come.</li>
+<li>In addition, the fast pace of increases in the death rate is largely driven by three southern counties - Strafford, Hillsborough, and Rockingham in that order. This is another reason for concern since these three counties are the industrial base of the state’s economy. For example, the three counties were responsible for nearly two thirds of the State’s economic activity in 2016 (measured by personal income).</li>
+<li>New Hampshire urgently needs more resources to combat the drug overdose crisis, particularly for young people in Southern New Hampshire.</li>
+</ul>
+</div>
